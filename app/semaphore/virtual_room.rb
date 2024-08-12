@@ -1,3 +1,4 @@
+require_relative 'simple'
 class VirtualClassroom
     def initialize(max_participants)
       @semaphore = Semaphore.new(max_participants)
