@@ -1,12 +1,20 @@
-counter = 0
+@stock = 1
 
-threads = 100.times.map do
-  Thread.new do
-    10000.times do
-      counter += 1
-    end
+def payment
+  if @stock > 0
+    @stock -= 1 
+    p "final stock: #{@stock}"
+  else
+    p "error! msg='stock of item is zero'"
   end
 end
 
+threads = 100.times.map do 
+  Thread.new do
+    payment
+  end
+end
+
+
 threads.each(&:join)
-puts "Counter akhir: #{counter}"
+
