@@ -1,4 +1,5 @@
 **/jsonplaceholder.json
+**/orders_*.csv
 *.gem
 *.rbc
 /.config
