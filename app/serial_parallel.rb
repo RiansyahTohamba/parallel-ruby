@@ -79,10 +79,10 @@ end
 
 # Ukur waktu eksekusi versi paralel
 parallel_time = measure_time do
-    thread_count = 4
+    thread_count = 1000
     output_filename = "orders_parallel.csv"
     write_orders_parallel(total_orders, thread_count)
-    combine_csv_files(output_filename, thread_count)
+    # combine_csv_files(output_filename, thread_count)
 end
 
 # p generate_random_order
